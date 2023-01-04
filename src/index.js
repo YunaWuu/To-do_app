@@ -18,6 +18,10 @@ async function getItems() {
       ...doc.data(),
     });
   });
+  
+  items.sort(function(x, y){
+    return y.createdAt - x.createdAt;
+  })
   generateItems(items);
 }
 
@@ -59,6 +63,7 @@ async function addItem(event) {
     const docRef = await addDoc(collection(db, "todo-items"), {
       text: text.value,
       status: "active",
+      createdAt: new Date(),
     });
     console.log("Document written with ID: ", docRef.id);
     text.value = "";
