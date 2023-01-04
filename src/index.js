@@ -9,6 +9,7 @@ import {
 import { db } from "./firebase.js";
 
 async function getItems() {
+    console.log("start get item")
   const querySnapshot = await getDocs(collection(db, "todo-items"));
   let items = [];
   querySnapshot.forEach((doc) => {
@@ -30,8 +31,8 @@ function generateItems(items) {
     let checkMark = document.createElement("div");
     checkMark.classList.add("check-mark");
     checkMark.innerHTML = '<img src="images/icon-check.svg">';
-    checkMark.addEventListener("click", function () {
-      markCompleted(item.id);
+    checkMark.addEventListener("click", async function () {
+      await markCompleted(item.id);
       getItems()
     });
     checkContainer.appendChild(checkMark);
@@ -67,21 +68,20 @@ async function addItem(event) {
 }
 
 async function markCompleted(id) {
-    console.log("<<<<<<")
   const docRef = doc(db, "todo-items", id);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists) {
     if (docSnap.data().status == "active") {
-      updateDoc(docRef, "status", "completed");
+        updateDoc(docRef, "status", "completed");
     } else {
-      updateDoc(docRef, "status", "active");
+        updateDoc(docRef, "status", "active");
     }
   }
 }
 
 getItems();
 
-document.getElementById("form").addEventListener("submit", (event) => {
-  addItem(event);
+document.getElementById("form").addEventListener("submit", async (event) => {
+  await addItem(event);
   getItems();
 });
