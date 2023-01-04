@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Family To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./firebase.js"></script>
+    <script type="module" src="./index.js"></script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="images/img.jpeg">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme">
+                <img src="images/icon-sun.svg">
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form id="form">
+                    <input id="todo-input" type="text" placeholder="Create a new todo..." />
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark checked">
+                            <img src="images/icon-check.svg">
+                        </div>
+                    </div>
+                    <div class="todo-text checked">
+                        Buy apple cider vinegar
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">   
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Buy small battery
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Buy shampoo
+                    </div>
+                </div>
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    5 items left
+                </div>
+                <div class="items-statuses">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <div class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

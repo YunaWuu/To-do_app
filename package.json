@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "firebase": "^9.15.0"
+  },
+  "name": "to-do_app",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunaWuu/To-do_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YunaWuu/To-do_app/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/YunaWuu/To-do_app#readme"
+}
