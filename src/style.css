@@ -163,6 +163,14 @@ body {
     padding-right: 30px;
 }
 
+.todo-items-info button {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: hsl(233, 14%, 35%);
+}
+
 .items-statuses {
     display: flex;
     justify-content: center;
